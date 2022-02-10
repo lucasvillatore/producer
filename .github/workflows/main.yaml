@@ -29,6 +29,6 @@ jobs:
 
         serverless plugin install --name serverless-plugin-git-variables
     - name: Deploy AWS
-      uses: d
+      uses: serverless/github-action@v3
       with:
         args: deploy
