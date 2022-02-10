@@ -12,12 +12,13 @@ provider:
 functions:
   index:
     handler: index.handler
+    name: producer
     memorySize: 128
     timeout: 3
     events:
       - http:
           method: GET
           path: /
-      - http:
-          method: GET
-          path: /teste
+    destinations:
+      onSuccess: ${env:queue_arn}
+        
