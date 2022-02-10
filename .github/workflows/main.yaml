@@ -24,10 +24,11 @@ jobs:
       run: |
         export queue_arn=arn:aws:sqs:us-east-1:672634884997:producer_queue
         printenv 
-        
+
         npm -g install serverless@2.72.2
 
         serverless plugin install --name serverless-plugin-git-variables
+        serverless plugin install --name serverless-offline
     - name: Deploy AWS
       uses: serverless/github-action@v3
       with:
