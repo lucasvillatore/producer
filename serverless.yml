@@ -1,6 +1,9 @@
 service: producer
 frameworkVersion: '2'
 
+plugins:
+  - serverless-plugin-git-variables
+  
 provider:
   name: aws
   runtime: nodejs12.x
