@@ -27,3 +27,4 @@ jobs:
       uses: serverless/github-action@v2
       with:
         args: -c "serverless plugin install --name serverless-plugin-git-variables && serverless plugin install --name serverless-offline && deploy --verbose" 
+        entrypoint: /bin/bash
