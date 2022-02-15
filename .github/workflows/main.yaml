@@ -23,6 +23,7 @@ jobs:
       run: |
         export queue_arn=arn:aws:sqs:us-east-1:672634884997:producer_queue
         ls
+        npm install
     - name: Deploy AWS
       uses: serverless/github-action@v2
       with:
