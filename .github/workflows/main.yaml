@@ -22,6 +22,7 @@ jobs:
     - name: Setup env variables
       run: |
         export queue_arn=arn:aws:sqs:us-east-1:672634884997:producer_queue
+        ls
     - name: Deploy AWS
       uses: serverless/github-action@v2
       with:
