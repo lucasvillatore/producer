@@ -10,12 +10,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 14.x
-    - run: npm install
-      
-    - name: list
-      run: |
-          ls
-      shell: bash
+    - run: npm run build
     
   upload-s3:
     runs-on: ubuntu-latest
@@ -29,3 +24,4 @@ jobs:
           aws-secret-key: 'l+/xu9QxmkD1PyHsdRpoNhcdE8rlVj/AFeczgK2m'
           bucket-s3: 'lucas-block-bucket-teste'
           region: 'us-east-1'
+          file: 'project.zip'
