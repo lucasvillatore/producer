@@ -1,15 +1,15 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  upload-s3:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to upload files to s3
     steps:
       - name: Hello world action step
         id: hello
         uses: lucasvillatore/action-upload-to-s3@master
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          aws-access-key: 'AKIAZZHBJ2OC64CPEZ6K'
+          aws-secret-key: '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'
+          bucket-s3: 'region'
+          region: 'us-east-1'
