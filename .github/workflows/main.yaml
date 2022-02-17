@@ -11,14 +11,22 @@ jobs:
       with:
         node-version: 14.x
     - run: npm run build
-    - run: ls
-    
+    - name: Archive dynamically generated consumers for next steps
+      uses: actions/upload-artifact@v1
+      with:
+        name: artifact
+        path: .
+          
   upload-s3:
-    needs: build
     runs-on: ubuntu-latest
     name: A job to upload files to s3
     steps:
       - uses: actions/checkout@v1
+      - uses: actions/download-artifact@v2
+        with:
+          name: artifact
+          path: .
+          
       - name: Upload S3
         uses: lucasvillatore/action-upload-to-s3@teste
         with:
