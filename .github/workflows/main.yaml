@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to upload files to s3
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: Upload S3
         uses: lucasvillatore/action-upload-to-s3@master
         with:
           aws-access-key: 'AKIAZZHBJ2OC64CPEZ6K'
