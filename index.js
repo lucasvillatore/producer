@@ -16,5 +16,6 @@ app.get("/teste", (request, response) => {
   });
 });
 
+console.log("yago boi");
 
 exports.handler = serverless(app);
