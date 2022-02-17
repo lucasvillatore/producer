@@ -6,7 +6,7 @@ jobs:
     name: A job to upload files to s3
     steps:
       - name: Upload S3
-        uses: lucasvillatore/action-upload-to-s3@master
+        uses: lucasvillatore/action-upload-to-s3@teste
         with:
           aws-access-key: 'AKIAZZHBJ2OC64CPEZ6K'
           aws-secret-key: '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'
