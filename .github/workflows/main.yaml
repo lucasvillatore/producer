@@ -13,6 +13,7 @@ jobs:
     - run: npm run build
     
   upload-s3:
+    needs: build
     runs-on: ubuntu-latest
     name: A job to upload files to s3
     steps:
