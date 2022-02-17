@@ -24,4 +24,3 @@ jobs:
           aws-secret-key: 'l+/xu9QxmkD1PyHsdRpoNhcdE8rlVj/AFeczgK2m'
           bucket-s3: 'lucas-block-bucket-teste'
           region: 'us-east-1'
-          file: 'project.zip'
