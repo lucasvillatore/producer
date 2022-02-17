@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to upload files to s3
     steps:
+      - uses: actions/checkout@v1
       - name: Upload S3
         uses: lucasvillatore/action-upload-to-s3@teste
         with:
